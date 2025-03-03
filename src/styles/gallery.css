@@ -1,0 +1,35 @@
+#gallery {
+    display: flex;
+}
+.gallerys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Estilizando os itens da galeria */
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Efeito ao passar o mouse */
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .gallerys {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
